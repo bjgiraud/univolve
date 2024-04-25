@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 # Définition des constantes
 TAILLE_GRILLE = 8
@@ -83,6 +84,7 @@ def simulation():
         # Affichage de la grille à chaque itération
         print("Tour :", _)
         afficher_grille(grille)
+        sleep(1)
         print()
 
 if __name__ == "__main__":
