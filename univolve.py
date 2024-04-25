@@ -39,7 +39,7 @@ def afficher_grille(grille):
                 #print(f"{case.espece.nom}{case.espece.population}", end="\t")
                 print(f"{case.espece.nom}", end="\t")
             else:
-                print("-", end="\t")
+                print(".", end="\t")
         print()
 
 def simulation():
@@ -47,9 +47,7 @@ def simulation():
     grille = [[Case() for _ in range(TAILLE_GRILLE)] for _ in range(TAILLE_GRILLE)]
 
     # Placement des premières espèces
-    #especes = ["▣", "◼", "◩", "◢", "◫", "◎", "◮", "◿", "★","⚈"]  # Ajoutez plus d'espèces au besoin
-    #especes = ["♔","♕","♖","♗","♘","♙","♚","♛","♜","♝","♞","♟","♠","♡","♢","♣","♤","♥","♦","♧"]  # Ajoutez plus d'espèces au besoin
-    especes = ["ぁ","あ","ぃ","い","ぅ","う","ぇ","え","ぉ","お","か","が","き","ぎ","く","ぐ","け","げ","こ","ご","さ","ざ","し","じ","す","ず","せ","ぜ","そ","ぞ","た","だ","ち","ぢ","っ","つ","づ","て","で","と","ど","な","に","ぬ","ね","の","は","ば","ぱ","ひ","び","ぴ","ふ","ぶ","ぷ","へ","べ","ぺ","ほ","ぼ","ぽ","ま","み","む","め","も","ゃ","や","ゅ","ゆ","ょ","よ","ら","り","る","れ","ろ","ゎ","わ","ゐ","ゑ","を","ん","ゔ","ゕ","ゖ"]  # Ajoutez plus d'espèces au besoin
+    especes = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]  # Ajoutez plus d'espèces au besoin
     for _ in range(POPULATION_INITIALE):
         x, y = random.randint(0, TAILLE_GRILLE-1), random.randint(0, TAILLE_GRILLE-1)
         espece = Espece(random.choice(especes), random.randint(1, POPULATION_MAX_PAR_ESPECE))
